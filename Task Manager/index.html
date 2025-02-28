@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Task Manager</title>
+        <link rel="stylesheet" href="styles.css" />
+        <script src="script.js" type="module"></script>
+    </head>
+
+    <body>
+        <h1>Task Manager</h1>
+        <div class="container">
+            <!-- Task Input Form -->
+            <div class="task-form">
+                <input type="text" id="task-input" placeholder="Add a new task">
+                <button id="add-task-btn">Add Task</button>
+            </div>
+      
+            <!-- Filter Options -->
+            <div class="filter-options">
+                <button id="filter-all" class="active">All</button>
+                <button id="filter-notStarted">Not Started</button>
+                <button id="filter-progress">In Progress</button>
+                <button id="filter-completed">Completed</button>
+            </div>
+      
+            <!-- Task List -->
+            <ul class="task-list" id="task-list">
+                <!-- Tasks will be dynamically added here -->
+                 <li class="task-item completed">
+                 </li>
+            </ul>
+        </div>
+    </body>
+</html>
