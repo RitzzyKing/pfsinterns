@@ -8,7 +8,6 @@ document.addEventListener('DOMContentLoaded', () => {
     let secondOperand = null;
     let shouldResetDisplay = false;
   
-    // Add event listeners to all buttons
     buttons.forEach(button => {
       button.addEventListener('click', () => {
         const value = button.textContent;
@@ -47,7 +46,6 @@ function handleOperator(op) {
     shouldResetDisplay = true;
 }
   
-// Handle decimal button click
 function handleDecimal() {
     if (!currentInput.includes('.')) {
         currentInput += '.';
@@ -55,7 +53,6 @@ function handleDecimal() {
     }
 }
   
-// Handle equals button click
 function handleEquals() {
     if (operator === null || shouldResetDisplay) {
         return;
@@ -67,7 +64,7 @@ function handleEquals() {
     if (result === Infinity || isNaN(result)) {
         result = 'Error';
     } else {
-        result = parseFloat(result.toFixed(10)); // Limit decimal places
+        result = parseFloat(result.toFixed(10)); 
     }
   
     currentInput = result.toString();
@@ -76,7 +73,6 @@ function handleEquals() {
     updateDisplay();
 }
   
-// Perform calculations
 function calculate(num1, num2, op) {
     
     if (op === '+') {
@@ -89,10 +85,9 @@ function calculate(num1, num2, op) {
         return num1 / num2;
     }
 
-    return num2; //Default 
+    return num2; 
 }
   
-// Handle clear button click
 function handleClear() {
     currentInput = '';
     operator = null;
@@ -102,13 +97,11 @@ function handleClear() {
     updateDisplay();
 }
   
-// Handle delete button click
 function handleDelete() {
     currentInput = currentInput.slice(0, -1);
     updateDisplay();
 }
   
-// Update the display
 function updateDisplay() {
         display.value = currentInput || '0';
     }
