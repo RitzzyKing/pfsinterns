@@ -1,0 +1,146 @@
+html {
+    margin: 0px;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    margin: 0px;
+    background: linear-gradient(rgb(230, 236, 247), rgb(194, 203, 221));
+    font-family: Arial, sans-serif;
+}
+
+header {
+    text-align: center;
+    margin: 0;
+    height: 100px;
+    background-color: #444;
+    color: #fff;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header h1 {
+    margin: 0; 
+}
+
+  
+.calculator {
+    width: 300px;
+    height: 400px;
+    background-color: #333;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    margin-top: 120px;
+}
+  
+.display {
+    margin-bottom: 20px;
+}
+  
+.display input {
+    width: 100%;
+    height: 50px;
+    background-color: #222;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 24px;
+    text-align: right;
+    padding: 10px;
+    box-sizing: border-box;
+}
+  
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, autofit);
+    gap: 10px;
+}
+  
+button {
+    width: 100%;
+    height: 57.5px;
+    background-color: #444;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+  
+button:hover {
+    background-color: #555;
+}
+  
+button:active {
+    background-color: #666;
+}
+  
+.operator {
+    background-color: #ff9500;
+}
+  
+.operator:hover {
+    background-color: #ffaa33;
+}
+  
+.operator:active {
+    background-color: #ffbb55;
+}
+
+.clear {
+    grid-column: span 2;
+}
+  
+.clear, .delete {
+    background-color: #ff3b30;
+}
+  
+.clear:hover, .delete:hover {
+    background-color: #ff5c5c;
+}
+  
+.clear:active, .delete:active {
+    background-color: #ff7f7f;
+}
+  
+.equals {
+    background-color: #4cd964;
+    grid-column: span 1;
+}
+  
+.equals:hover {
+    background-color: #5de673;
+}
+  
+.equals:active {
+    background-color: #6eff80;
+}
+  
+.zero {
+    grid-column: span 2;
+}
+  
+.decimal {
+    background-color: #444;
+}
+  
+.decimal:hover {
+    background-color: #555;
+}
+  
+.decimal:active {
+    background-color: #666;
+}
